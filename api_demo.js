@@ -253,8 +253,10 @@
 
         url = "https://api.openweathermap.org/data/2.5/weather?"
         weatherKey = "6895f508d6b179d3b88d1cda4bcf0898"
-        lat = sessionStorage.getItem("lat") 
-        lon = sessionStorage.getItem("lon") 
+        // lat = sessionStorage.getItem("lat") 
+        // lon = sessionStorage.getItem("lon") 
+        lat = 50
+        lon = -87.235
         weatherParams = {"lat": lat,
                             "lon": lon,
                             "units": "imperial",
@@ -268,7 +270,8 @@
             type: "GET",
             data: weatherParams,
             success: function(resp){
-                changeDisplay(resp);
+                // changeDisplay(resp);
+                console.log(resp);
             },
             error: function(error){
                 console.log(error)
